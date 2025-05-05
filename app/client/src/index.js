@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import Projects from './pages/ProjectPage';
 import Contact from './pages/ContactPage';
+import About from './pages/AboutPage';
 
 
 var basepath = "/policy/group1/app";
@@ -22,13 +23,18 @@ const router = createBrowserRouter([
   },
   {
     
-    path : '/project',
+    path : '/projects',
     element : <Projects />
   },
   {
     
     path : '/contact',
     element : <Contact />
+  },
+  {
+    
+    path : '/about',
+    element : <About />
   },
   
 ], {basename: basepath})
