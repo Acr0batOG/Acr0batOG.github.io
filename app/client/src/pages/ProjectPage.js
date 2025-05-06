@@ -74,16 +74,18 @@ const ProjectPage = () => {
 
         <div className="flex items-center gap-4">
           {canGoPrev && (
-            <button
-              onClick={handlePrev}
-              className="text-3xl text-indigo-600 hover:text-indigo-800 transition"
-              aria-label="Previous"
-            >
-              ←
-            </button>
+           <button
+           onClick={handlePrev}
+           className={`text-3xl text-indigo-600 hover:text-indigo-800 transition ${
+             canGoPrev ? '' : 'opacity-0 pointer-events-none'
+           }`}
+           aria-label="Previous"
+         >
+           ←
+         </button>
           )}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-[92rem]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-[108rem]">
             {visibleProjects.map((project, index) => (
               <div
                 key={startIndex + index}
@@ -99,7 +101,7 @@ const ProjectPage = () => {
                   <img
                     src={hoveredProject === index ? project.gifRef : project.staticRef}
                     alt={project.alt}
-                    className="rounded-md w-auto h-[14rem]"
+                    className="rounded-md w-auto h-[16rem]"
                   />
                 </div>
                 {project.link ? (
@@ -123,11 +125,13 @@ const ProjectPage = () => {
           {canGoNext && (
             <button
               onClick={handleNext}
-              className="text-3xl text-indigo-600 hover:text-indigo-800 transition"
+              className={`text-3xl text-indigo-600 hover:text-indigo-800 transition ${
+                canGoNext ? '' : 'opacity-0 pointer-events-none'
+              }`}
               aria-label="Next"
             >
               →
-            </button>
+          </button>
           )}
         </div>
       </div>
