@@ -72,7 +72,7 @@ const ProjectPage = () => {
           My Projects
         </h1>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 pb-24">
           
         <button
           onClick={handlePrev}
