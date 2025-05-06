@@ -24,7 +24,7 @@ const projects = [
   {
     title: "On-Body Scrolling in VR",
     gifRef: "/gifs/onbody.gif",
-    staticRef: "/images/on-body.png",
+    staticRef: "/images/onbody.jpg",
     alt: "On-Body Scrolling",
     description: "A Unity-based VR application that allows users to scroll through content using on-body gestures.",
     link: "https://github.com/Acr0batOG/VRScrollingHand",
@@ -77,8 +77,8 @@ const ProjectPage = () => {
         <button
           onClick={handlePrev}
           disabled={!canGoPrev}
-          className={`w-12 h-12 flex items-center justify-center rounded-full  
-            ${canGoPrev ? 'bg-indigo-600 hover:bg-indigo-800 opacity-95 transition duration-300' : 'bg-gray-400'}`}
+          className={`w-12 h-12 flex items-center justify-center rounded-xl  
+            ${canGoPrev ? 'bg-indigo-600 hover:bg-indigo-800 opacity-97 transition duration-300' : 'bg-gray-400'}`}
           aria-label="Previous"
         >
           <img
@@ -94,7 +94,7 @@ const ProjectPage = () => {
             {visibleProjects.map((project, index) => (
               <div
                 key={startIndex + index}
-                className="bg-gray-100 rounded-2xl shadow-md hover:shadow-xl hover:scale-[1.02] transition duration-300 pl-6 pr-6 pb-4 pt-4"
+                className="bg-gray-100 rounded-2xl shadow-md hover:shadow-lg hover:scale-[1.02] transition duration-300 pl-6 pr-6 pb-4 pt-4"
                 onMouseEnter={() => setHoveredProject(index)}
                 onMouseLeave={() => setHoveredProject(null)}
               >
@@ -130,14 +130,16 @@ const ProjectPage = () => {
         <button
           onClick={handleNext}
           disabled={!canGoNext}
-          className={`w-12 h-12 flex items-center justify-center rounded-full  
-            ${canGoNext ? 'bg-indigo-600 opacity-95 hover:bg-indigo-800 transition' : 'bg-gray-400'}`}
+          className={`w-12 h-12 flex items-center justify-center rounded-xl  
+            ${canGoNext ? 'bg-indigo-600 opacity-97 hover:bg-indigo-800 transition' : 'bg-gray-400'}`}
           aria-label="Previous"
         >
           <img
             src="/images/arrow_right.svg"
             alt="Arrow"
             className="w-10 h-10"
+            onClick={handleNext}
+          disabled={!canGoNext}
           />
         </button>
         </div>
