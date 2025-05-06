@@ -17,7 +17,7 @@ const AboutPage = () => {
       <Header />
       <SideNavBar />
       <div
-        className="flex-grow bg-cover bg-center flex flex-col items-center px-4"
+        className="flex-grow bg-cover bg-center flex flex-col items-center px-4 pb-36"
         style={{
           backgroundImage: "url('/images/background.svg')",
         }}
@@ -42,7 +42,7 @@ const AboutPage = () => {
         </div>
 
         {/* Bio Section */}
-        <div className="bg-gray-100 p-8 rounded-2xl shadow-md w-full max-w-3xl text-gray-800 text-lg leading-relaxed pb-24">
+        <div className="bg-gray-100 p-8 rounded-2xl shadow-md w-full max-w-3xl text-gray-800 text-lg leading-relaxed">
           <p className="mb-6">
             Hey there! I’m a full-stack developer who lives and breathes code, design, and the magic that happens in between...
           </p>

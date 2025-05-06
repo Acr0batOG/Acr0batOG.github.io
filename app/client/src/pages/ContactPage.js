@@ -8,15 +8,15 @@ const ContactPage = () => {
       <Header />
       <SideNavBar />
       <div
-        className="flex-grow bg-cover bg-center flex flex-col items-center px-4"
+        className="flex-grow bg-cover bg-center flex flex-col items-center px-4 pb-36"
         style={{
           backgroundImage: "url('/images/background.svg')",
         }}
       >
-        <h1 className="text-4xl font-bold text-indigo-600 mt-36 mb-16 text-center">
+        <h1 className="text-4xl font-bold text-indigo-600 mt-24 mb-16 text-center">
           Contact Me
         </h1>
-        <form className="bg-gray-100 p-8 rounded-2xl shadow-md w-full max-w-xl pb-24">
+        <form className="bg-gray-100 p-8 rounded-2xl shadow-md w-full max-w-xl">
           <div className="mb-4">
             <label className="block text-gray-700 font-medium mb-2">
               Name

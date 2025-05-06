@@ -17,7 +17,7 @@ const HomePage = () => {
           backgroundImage: "url('/images/background.svg')",
         }}
       >
-        <div className="flex flex-col items-center text-black pt-64 space-y-20 pb-24">
+        <div className="flex flex-col items-center text-black pt-48 space-y-20 pb-36">
           <h1 className="text-5xl font-bold uppercase tracking-wide">
             Hey, I'm Rhys Smith
           </h1>
