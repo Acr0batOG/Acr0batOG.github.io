@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 const projects = [
   {
     title: "IRIS",
-    description: "A React and Python, insurance policy review system designed for BFL Canada.",
+    description: "An insurance policy review system developed for BFL Canada. Allowing users to compare, annotate and review policy documents.",
     gifRef: "/gifs/iris.gif",
     staticRef: "/images/iris.png",
     alt: "Iris",
@@ -73,19 +73,24 @@ const ProjectPage = () => {
         </h1>
 
         <div className="flex items-center gap-4">
-          {canGoPrev && (
-           <button
-           onClick={handlePrev}
-           className={`text-3xl text-indigo-600 hover:text-indigo-800 transition ${
-             canGoPrev ? '' : 'opacity-0 pointer-events-none'
-           }`}
-           aria-label="Previous"
-         >
-           ←
-         </button>
-          )}
+          
+        <button
+          onClick={handlePrev}
+          disabled={!canGoPrev}
+          className={`w-12 h-12 flex items-center justify-center rounded-full  
+            ${canGoPrev ? 'bg-indigo-600 hover:bg-indigo-800 opacity-95 transition duration-300' : 'bg-gray-400'}`}
+          aria-label="Previous"
+        >
+          <img
+            src="/images/arrow_left.svg"
+            alt="Arrow"
+            className="w-10 h-10"
+          />
+        </button>
+         
+         
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-[108rem]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-[116rem] pl-8 pr-8">
             {visibleProjects.map((project, index) => (
               <div
                 key={startIndex + index}
@@ -101,7 +106,7 @@ const ProjectPage = () => {
                   <img
                     src={hoveredProject === index ? project.gifRef : project.staticRef}
                     alt={project.alt}
-                    className="rounded-md w-auto h-[16rem]"
+                    className="rounded-md w-auto h-[16.5rem]"
                   />
                 </div>
                 {project.link ? (
@@ -122,17 +127,19 @@ const ProjectPage = () => {
             ))}
           </div>
 
-          {canGoNext && (
-            <button
-              onClick={handleNext}
-              className={`text-3xl text-indigo-600 hover:text-indigo-800 transition ${
-                canGoNext ? '' : 'opacity-0 pointer-events-none'
-              }`}
-              aria-label="Next"
-            >
-              →
-          </button>
-          )}
+        <button
+          onClick={handleNext}
+          disabled={!canGoNext}
+          className={`w-12 h-12 flex items-center justify-center rounded-full  
+            ${canGoNext ? 'bg-indigo-600 opacity-95 hover:bg-indigo-800 transition' : 'bg-gray-400'}`}
+          aria-label="Previous"
+        >
+          <img
+            src="/images/arrow_right.svg"
+            alt="Arrow"
+            className="w-10 h-10"
+          />
+        </button>
         </div>
       </div>
     </div>
