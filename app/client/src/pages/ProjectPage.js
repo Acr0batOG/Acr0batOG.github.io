@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import SideNavBar from '../components/SideNavBar';
@@ -7,36 +7,42 @@ import { useTranslation } from "react-i18next";
 const projects = [
   {
     title: "IRIS",
-    description: "A React and Python, insurance document review system designed for BFL Canada",
+    description: "A React and Python, insurance policy review system designed for BFL Canada.",
     gifRef: "/gifs/iris.gif",
+    staticRef: "/images/iris.png",
     alt: "Iris",
-    link: "https://github.com/COSC-499-W2024/capstone-project-team-1-003",
+    link: "",
   },
   {
     title: "Cancer Pathology Report Annotation",
     gifRef: "/gifs/annotation.gif",
+    staticRef: "/images/annotation.png",
     alt: "Cancer Annotation",
-    description: "Annotating Breast Cancer Pathology Reports from BC Cancer data",
-    link: "https://weather-app.com",
+    description: "Annotating Breast Cancer Pathology Reports from BC Cancer data to faciliate the training of an NLP model.",
+    link: "https://github.com/Acr0batOG/BC_Cancer_Honours_Project",
   },
   {
     title: "On-Body Scrolling in VR",
     gifRef: "/gifs/onbody.gif",
+    staticRef: "/images/on-body.png",
     alt: "On-Body Scrolling",
-    description: "A Unity application developed to use On-Body Scrolling in VR",
-    link: "https://memory-game.com",
+    description: "A Unity-based VR application that allows users to scroll through content using on-body gestures.",
+    link: "https://github.com/Acr0batOG/VRScrollingHand",
   },
   {
     title: "eduQuest",
-    description: "An e-learning platform to make learning more exciting",
-    gifRef: "/gifs/eduQuest.gif",
+    description: "An interactive e-learning platform designed to make education more engaging.",
+    gifRef: "/gifs/eduquest.gif",
+    staticRef: "/images/eduquest.png",
     alt: "eduQuest",
-    link: "https://your-portfolio.com",
+    link: "https://github.com/chpsmstr/eduQuest",
   },
- 
 ];
 
 const ProjectPage = () => {
+  
+  const [hoveredProject, setHoveredProject] = useState(null);
+
   return (
     <div className="h-screen flex flex-col overflow-hidden overflow-y-auto">
       <Header />
@@ -47,36 +53,46 @@ const ProjectPage = () => {
           backgroundImage: "url('/images/background.svg')",
         }}
       >
-      <h1 className="text-4xl font-bold text-indigo-600 mt-24 mb-12 text-center">
-        My Projects
-      </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-2/3">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className="bg-gray-100 rounded-2xl shadow-md hover:shadow-lg transition duration-300 p-6"
-          >
-            <h2 className="text-xl font-semibold text-indigo-600 mb-2">
-              {project.title}
-            </h2>
-            <p className="text-gray-700 mb-4">{project.description}</p>
-            <img
-            src = {project.gifRef}
-            alt = {project.alt}
-            className = ""
-            />
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-indigo-600 hover:underline font-medium"
+        <h1 className="text-4xl font-bold text-indigo-600 mt-12 mb-12 text-center">
+          My Projects
+        </h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-[108rem]">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="bg-gray-100 rounded-2xl shadow-md hover:shadow-xl hover:scale-[1.02] transition duration-300 pl-6 pr-6 pb-4 pt-4"
+              onMouseEnter={() => setHoveredProject(index)}
+              onMouseLeave={() => setHoveredProject(null)}
             >
-              View Project →
-            </a>
-          </div>
-        ))}
+              <h2 className="text-xl font-semibold text-indigo-600 mb-2">
+                {project.title}
+              </h2>
+              <p className="text-gray-700 mb-4">{project.description}</p>
+
+              <div className="overflow-hidden rounded-md">
+                <img
+                  src={hoveredProject === index ? project.gifRef : project.staticRef}
+                  alt={project.alt}
+                  className="rounded-md w-full h-auto"
+                />
+              </div>
+              
+              {project.link ? (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-indigo-600 hover:underline font-medium mt-4 block"
+                >
+                  Project Repository →
+                </a>
+              ) : (
+                <span className="text-indigo-600 hover:text-gray-500 font-medium mt-4 block">Private Repository</span>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
     </div>
   );
 };
