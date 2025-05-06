@@ -42,7 +42,7 @@ const AboutPage = () => {
         </div>
 
         {/* Bio Section */}
-        <div className="bg-gray-100 p-8 rounded-2xl shadow-md w-full max-w-3xl text-gray-800 text-lg leading-relaxed">
+        <div className="bg-gray-100 p-8 rounded-2xl shadow-md w-full max-w-3xl text-gray-800 text-lg leading-relaxed pb-24">
           <p className="mb-6">
             Hey there! I’m a full-stack developer who lives and breathes code, design, and the magic that happens in between...
           </p>

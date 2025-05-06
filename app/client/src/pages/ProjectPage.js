@@ -43,7 +43,7 @@ const ProjectPage = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
   const [startIndex, setStartIndex] = useState(0);
 
-  const canGoNext = startIndex + 3 < projects.length;
+  const canGoNext = startIndex + 2 < projects.length;
   const canGoPrev = startIndex > 0;
 
   const handleNext = () => {
@@ -58,7 +58,7 @@ const ProjectPage = () => {
     }
   };
 
-  const visibleProjects = projects.slice(startIndex, startIndex + 3);
+  const visibleProjects = projects.slice(startIndex, startIndex + 2);
 
   return (
     <div className="h-screen flex flex-col overflow-hidden overflow-y-auto">
@@ -90,7 +90,7 @@ const ProjectPage = () => {
          
          
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-[116rem] pl-8 pr-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 max-w-[76rem] pl-8 pr-8">
             {visibleProjects.map((project, index) => (
               <div
                 key={startIndex + index}

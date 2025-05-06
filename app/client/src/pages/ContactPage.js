@@ -16,7 +16,7 @@ const ContactPage = () => {
         <h1 className="text-4xl font-bold text-indigo-600 mt-36 mb-16 text-center">
           Contact Me
         </h1>
-        <form className="bg-gray-100 p-8 rounded-2xl shadow-md w-full max-w-xl">
+        <form className="bg-gray-100 p-8 rounded-2xl shadow-md w-full max-w-xl pb-24">
           <div className="mb-4">
             <label className="block text-gray-700 font-medium mb-2">
               Name
