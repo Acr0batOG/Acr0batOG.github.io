@@ -15,6 +15,7 @@ const Header = () => {
             alt="Profile"
             className="w-full h-full object-cover"
             onClick={() => navigate("/about")}
+            style={{ imageRendering: 'optimize-contrast', backfaceVisibility: 'hidden' }}
         />
         </div>
 

@@ -56,7 +56,7 @@ const ProjectPage = () => {
         <h1 className="text-4xl font-bold text-indigo-600 mt-12 mb-12 text-center">
           My Projects
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-[108rem]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-[96rem]">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -73,7 +73,7 @@ const ProjectPage = () => {
                 <img
                   src={hoveredProject === index ? project.gifRef : project.staticRef}
                   alt={project.alt}
-                  className="rounded-md w-full h-auto"
+                  className="rounded-md w-auto h-[14.5rem]"
                 />
               </div>
               

@@ -34,7 +34,7 @@ const ContactPage = () => {
             <input
               type="email"
               className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600"
-              placeholder="your@email.com"
+              placeholder="example@email.com"
             />
           </div>
           <div className="mb-6">
