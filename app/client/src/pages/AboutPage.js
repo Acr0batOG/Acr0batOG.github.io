@@ -59,7 +59,7 @@ const AboutPage = () => {
           <img
             src={fullscreenImg}
             alt="Fullscreen"
-            className="max-w-[64rem] max-h-[64rem] object-contain rounded-lg"
+            className="max-w-[42rem] max-h-[42rem] object-contain rounded-lg"
           />
         </div>
       )}

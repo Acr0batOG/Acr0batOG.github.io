@@ -1,0 +1,20 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Database Connection if Needed",
+  "homepage": "https://github.com/Acr0batOG/Acr0batOG.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/Acr0batOG/Acr0batOG.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Acr0batOG/Acr0batOG.github.io.git"
+  },
+  "license": "ISC",
+  "author": "Rhys Smith",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  }
+}
