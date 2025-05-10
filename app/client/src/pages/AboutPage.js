@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import SideNavBar from '../components/SideNavBar';
+import { useNavigate } from 'react-router-dom';
 
 const AboutPage = () => {
   const [fullscreenImg, setFullscreenImg] = useState(null);
-
+  const navigate = useNavigate();
   const openImage = (src) => {
     const fullSrc = src.replace('_small', '');
     setFullscreenImg(fullSrc);
@@ -15,13 +16,14 @@ const AboutPage = () => {
   return (
     <div className="h-screen flex flex-col overflow-hidden overflow-y-auto">
       <Header />
-      <SideNavBar />
+      
       <div
         className="flex-grow bg-cover bg-center flex flex-col items-center px-4 pb-36"
         style={{
           backgroundImage: "url('/images/background.svg')",
         }}
       >
+        <SideNavBar />
         <h1 className="text-4xl font-bold text-indigo-600 mt-24 mb-10 text-center">
           About Me
         </h1>
@@ -43,10 +45,33 @@ const AboutPage = () => {
 
         {/* Bio Section */}
         <div className="bg-gray-100 p-8 rounded-2xl shadow-md w-full max-w-3xl text-gray-800 text-lg leading-relaxed">
-          <p className="mb-6">
-            Hey there! I’m a full-stack developer who lives and breathes code, design, and the magic that happens in between...
+          <p>
+            Hey! I'm Rhys Smith. </p>
+            <p className='mt-4'> A full-stack developer with expertise in React, C# and Python. I recently graduated from UBCO with a Bachelor of Science (Honours) in Computer Science. You can check out some of my past projects on the{' '}
+            <span
+              onClick={() => navigate("/projects")}
+              className="text-indigo-600 cursor-pointer hover:text-indigo-800"
+            >
+              projects
+            </span>{' '}
+            page.
+            </p>
+            
+          <p className="mt-4">
+            In my free time, I enjoy playing guitar and creating music. I also love gaming with friends, my current favourite is Counter-Strike 2.
           </p>
-          {/* (rest of bio content) */}
+          <p className="mt-4">
+            When the weather’s warm, you’ll often find me out on the golf course. And during the winter, I’m usually up at the ski hill enjoying the snow.
+          </p>
+          <p className='mt-4'>
+            I’m currently seeking opportunities to kick off my professional career as a developer and contribute to meaningful projects. If you think I’d be a great fit, feel free to <span
+              onClick={() => navigate("/contact")}
+              className="text-indigo-600 cursor-pointer hover:text-indigo-800"
+            >
+              contact
+            </span>{' '} me. I’d love to connect.
+          </p>
+          
         </div>
       </div>
 

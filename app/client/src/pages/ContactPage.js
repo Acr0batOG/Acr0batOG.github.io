@@ -38,14 +38,14 @@ const ContactPage = () => {
   return (
     <div className="h-screen flex flex-col overflow-hidden overflow-y-auto">
       <Header />
-      <SideNavBar />
+      
       <div
         className="flex-grow bg-cover bg-center flex flex-col items-center px-4 pb-36"
         style={{
           backgroundImage: "url('/images/background.svg')",
         }}
       >
-        
+        <SideNavBar />
             <h1 className="text-4xl font-bold text-indigo-600 mt-24 mb-16 text-center">
               Contact Me
             </h1>

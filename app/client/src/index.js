@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage';
 import Projects from './pages/ProjectPage';
 import Contact from './pages/ContactPage';
 import About from './pages/AboutPage';
+import NotFoundPage from './pages/NotFoundPage'
 
 
 var basepath = "/policy/group1/app";
@@ -35,6 +36,11 @@ const router = createBrowserRouter([
     
     path : '/about',
     element : <About />
+  },
+  {
+    //'*' routes to any invalid/unavailable routes
+    path : '*',
+    element : <NotFoundPage />
   },
   
 ], {basename: basepath})
