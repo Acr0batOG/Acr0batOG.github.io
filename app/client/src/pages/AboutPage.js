@@ -30,12 +30,12 @@ const AboutPage = () => {
 
         {/* Filler Images */}
         <div className="flex gap-8 mb-10 flex-wrap justify-center">
-          {['Skiing', 'Golf', 'VR'].map((activity) => (
+          {['skiing', 'golf', 'vr'].map((activity) => (
             <img
               key={activity}
-              src={`/images/rhys_${activity}_small.jpg`}
+              src={`/images/rhys${activity}small.jpg`}
               alt={activity}
-              onClick={() => openImage(`/images/rhys_${activity}_small.jpg`)}
+              onClick={() => openImage(`/images/rhys${activity}small.jpg`)}
               className="cursor-pointer rounded-2xl shadow-md w-72 h-72 object-cover hover:scale-[1.1] hover:shadow-xl border-[1px] border-indigo-600 transition-transform"
               style={{ imageRendering: 'optimize-contrast' }}
               title = {`${activity}`}
