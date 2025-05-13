@@ -8,7 +8,7 @@ const NotFoundPage = () => {
     <div className="h-screen flex flex-col overflow-hidden overflow-y-auto">
       
       <div
-        className="flex-grow bg-cover bg-center flex flex-col items-center justify-center px-4 pb-36"
+        className="flex-grow bg-cover bg-center flex flex-col items-center justify-center px-4 pb-28 pt-28"
         style={{
           backgroundImage: "url('/images/background.svg')",
         }}

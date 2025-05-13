@@ -17,14 +17,17 @@ const AboutPage = () => {
     <div className="h-screen flex flex-col overflow-hidden overflow-y-auto">
       <Header />
       
-      <div
-        className="flex-grow bg-cover bg-center flex flex-col items-center px-4 pb-36"
+      <div className="flex-grow bg-cover bg-center flex"
         style={{
           backgroundImage: "url('/images/background.svg')",
         }}
       >
-        <SideNavBar />
-        <h1 className="text-4xl font-bold text-indigo-600 mt-24 mb-10 text-center">
+        {/* Side navigation column */}
+        <div className="w-0 h-full">
+          <SideNavBar />
+        </div>
+        <div className="flex-1 flex flex-col items-center text-black space-y-20 pb-36">
+        <h1 className="text-4xl font-bold text-indigo-600 mt-20 mb-6 text-center">
           About Me
         </h1>
 
@@ -88,6 +91,7 @@ const AboutPage = () => {
           />
         </div>
       )}
+    </div>
     </div>
   );
 };

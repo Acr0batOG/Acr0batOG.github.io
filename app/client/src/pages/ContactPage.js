@@ -40,15 +40,22 @@ const ContactPage = () => {
       <Header />
       
       <div
-        className="flex-grow bg-cover bg-center flex flex-col items-center px-4 pb-36"
+        className="flex-grow bg-cover bg-center flex"
         style={{
           backgroundImage: "url('/images/background.svg')",
         }}
       >
-        <SideNavBar />
-            <h1 className="text-4xl font-bold text-indigo-600 mt-24 mb-16 text-center">
+
+        {/* Side navigation column */}
+        <div className="w-0 h-full">
+          <SideNavBar />
+        </div>
+        <div className="flex-1 flex flex-col items-center text-black space-y-20 pb-36">
+        
+            <h1 className="text-4xl font-bold text-indigo-600 mt-20 mb-6 text-center">
               Contact Me
             </h1>
+            
             <form ref = {form} onSubmit = {sendEmail} className="form-control bg-gray-100 p-8 rounded-2xl shadow-md w-full max-w-xl">
               <div className="mb-4">
                 <label className="block text-gray-700 font-medium mb-2">
@@ -102,6 +109,7 @@ const ContactPage = () => {
               </button>
             </form>
           </div>
+    </div>
     </div>
   );
 };

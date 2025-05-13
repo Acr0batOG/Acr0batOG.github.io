@@ -64,11 +64,15 @@ const ProjectPage = () => {
       <Header />
       
       <div
-        className="flex-grow bg-cover bg-center flex flex-col items-center px-4"
+        className="flex-grow bg-cover bg-center flex"
         style={{ backgroundImage: "url('/images/background.svg')" }}
       >
-        <SideNavBar />
-        <h1 className="text-4xl font-bold text-indigo-600 mt-12 mb-12 text-center">
+        {/* Side navigation column */}
+        <div className="w-0 h-full">
+          <SideNavBar />
+        </div>
+        <div className="flex-1 flex flex-col items-center text-black space-y-20 pb-8">
+        <h1 className="text-4xl font-bold text-indigo-600 mt-20 mb-6 text-center">
           My Projects
         </h1>
 
@@ -90,7 +94,7 @@ const ProjectPage = () => {
          
          
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 max-w-[76rem] pl-8 pr-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 max-w-[68rem] pl-8 pr-8">
             {visibleProjects.map((project, index) => (
               <div
                 key={startIndex + index}
@@ -106,7 +110,7 @@ const ProjectPage = () => {
                   <img
                     src={hoveredProject === index ? project.gifRef : project.staticRef}
                     alt={project.alt}
-                    className="rounded-md w-auto h-[16.5rem]"
+                    className="rounded-md w-auto h-[15rem]"
                   />
                 </div>
                 {project.link ? (
@@ -144,6 +148,7 @@ const ProjectPage = () => {
         </button>
         </div>
       </div>
+    </div>
     </div>
   );
 };
