@@ -61,7 +61,7 @@ const AboutPage = () => {
             </p>
             
           <p className="mt-4">
-            In my free time, I enjoy playing guitar and creating music. I also love gaming with friends, my current favourite is Counter-Strike 2.
+            In my free time, I enjoy playing guitar and creating music. I also quite enjoy gaming with friends, my current favourite is Counter-Strike 2.
           </p>
           <p className="mt-4">
             When the weather’s warm, you’ll often find me out on the golf course. And during the winter, I’m usually up at the ski hill enjoying the snow.

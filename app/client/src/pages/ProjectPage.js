@@ -6,7 +6,7 @@ import SideNavBar from '../components/SideNavBar';
 const projects = [
   {
     title: "IRIS",
-    description: "An insurance policy review system developed for BFL Canada. Allowing users to compare, annotate and review policy documents.",
+    description: "An insurance policy review system developed for BFL Canada. Allowing users to annotate and review policy documents.",
     gifRef: "/gifs/iris.gif",
     staticRef: "/images/iris.png",
     alt: "Iris",
