@@ -20,7 +20,7 @@ const ContactPage = () => {
             e.target.reset(); 
             setTimeout(() => {
               window.location.href = '/';
-            }, 750);
+            }, 500);
           },
           (error) => {
             console.log('FAILED...', error.text);
@@ -28,7 +28,7 @@ const ContactPage = () => {
             e.target.reset();
             setTimeout(() => {
               window.location.href = '/';
-            }, 750);
+            }, 500);
           },
         );
     } catch (e) {
