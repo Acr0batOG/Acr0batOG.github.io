@@ -16,7 +16,7 @@ const ContactPage = () => {
         .then(
           () => {
             console.log('SUCCESS!');
-            alert("Form has been sent");
+            alert("Your message has been sent.");
             e.target.reset(); 
             setTimeout(() => {
               window.location.href = '/';
@@ -24,7 +24,7 @@ const ContactPage = () => {
           },
           (error) => {
             console.log('FAILED...', error.text);
-            alert("There was an error sending the form");
+            alert("There was an error sending the message");
             e.target.reset();
             setTimeout(() => {
               window.location.href = '/';
