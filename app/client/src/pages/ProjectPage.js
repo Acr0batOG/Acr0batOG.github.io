@@ -64,7 +64,7 @@ const ProjectPage = () => {
       <Header />
       
       <div
-        className="flex-grow bg-cover bg-center flex"
+        className="flex-grow bg-cover bg-top flex"
         style={{ backgroundImage: "url('/images/background.svg')" }}
       >
         {/* Side navigation column */}

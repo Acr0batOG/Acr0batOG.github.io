@@ -17,7 +17,7 @@ const AboutPage = () => {
     <div className="h-screen flex flex-col overflow-hidden overflow-y-auto">
       <Header />
       
-      <div className="flex-grow bg-cover bg-center flex"
+      <div className="flex-grow bg-cover bg-top flex"
         style={{
           backgroundImage: "url('/images/background.svg')",
         }}
