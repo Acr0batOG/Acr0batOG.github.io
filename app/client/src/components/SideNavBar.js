@@ -6,19 +6,19 @@ const SideNavBar = () => {
   return (
     <div className="flex items-center h-full">
       <div className="group z-50">
-        <div className="relative bg-indigo-600 text-white rounded-r-lg w-10 max-w-10 h-24 max-h-24 flex items-center justify-center transition-all duration-300 group-hover:w-32 group-hover:max-w-32 group-hover:h-80 group-hover:max-h-80 overflow-visible">
+        <div className="relative bg-indigo-600 text-white rounded-r-lg md:w-10 sm:w-8 max-w-10 md:h-24 sm:h-16 max-h-24 flex items-center justify-center transition-all duration-300 group-hover:w-32 group-hover:max-w-32 group-hover:h-80 group-hover:max-h-80 overflow-visible">
 
           {/* Arrow Icon */}
           <div className="z-10 transition-transform duration-500 group-hover:hidden">
             <img
               src="/images/arrow.svg"
               alt="hover"
-              className="w-8 max-w-8 h-8 max-h-8 object-cover"
+              className="md:w-8 sm:w-6 max-w-8 md:h-8 sm:h-6 max-h-8 object-cover"
             />
           </div>
 
           {/* Social Icons container - absolutely positioned to avoid layout shift */}
-          <div className="absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-0 ease-in group-hover:opacity-100 group-hover:pointer-events-auto group-hover:duration-500 flex flex-col items-start pl-6 pt-8 pb-8 text-sm"> 
+          <div className="absolute inset-0 opacity-0 pointer-events-none transition-opacity duration-0 ease-in group-hover:opacity-100 group-hover:pointer-events-auto group-hover:duration-500 flex flex-col items-start md:pl-6 md:pt-8 md:pb-8 sm:pl-2 sm:pt-4 sm:pb-4 text-sm"> 
             <img
               src="/images/linkedin.svg"
               alt="LinkedIn"

@@ -40,7 +40,7 @@ const ContactPage = () => {
       <Header />
       
       <div
-        className="flex-auto bg-cover bg-top flex"
+        className="md:flex-auto sm:flex-grow bg-cover bg-top flex"
         style={{
           backgroundImage: "url('/images/background.svg')",
         }}
@@ -50,9 +50,9 @@ const ContactPage = () => {
         <div className="w-0 h-full">
           <SideNavBar />
         </div>
-        <div className="flex-1 flex flex-col items-center text-black space-y-20 pb-36">
+        <div className="flex-1 flex flex-col items-center text-black space-y-20 md:pb-36 sm:pb-24 md:pl-0 md:pr-0 sm:pr-24 sm:pl-24">
         
-            <h1 className="text-4xl font-bold text-indigo-600 mt-20 mb-6 text-center">
+            <h1 className="text-4xl font-bold text-indigo-600 sm:mt-16 sm:mb-0 md:mt-20 md:mb-6 text-center">
               Contact Me
             </h1>
             

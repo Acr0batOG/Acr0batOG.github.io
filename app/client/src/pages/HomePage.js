@@ -13,7 +13,7 @@ const HomePage = () => {
       <Header />
       
       <div
-        className="flex-grow bg-cover bg-top flex"
+        className="md:flex-auto sm:flex-grow bg-cover bg-top flex"
         style={{
           backgroundImage: "url('/images/background.svg')",
         }}
@@ -24,25 +24,25 @@ const HomePage = () => {
         </div>
         
         {/* Main content column */}
-        <div className="flex-1 flex flex-col items-center text-black pt-48 space-y-20 pb-36">
-          <h1 className="text-5xl font-bold uppercase tracking-wide">
+        <div className="flex-1 flex flex-col items-center text-black md:pt-48 sm:pt-24 space-y-20 md:pb-36 sm:pb-24 md:pl-0 md:pr-0 sm:pr-24 sm:pl-24">
+          <h1 className="md:text-5xl sm:text-3xl font-bold uppercase tracking-wide">
             Hey, I'm Rhys Smith
           </h1>
 
-          <p className="text-xl max-w-3xl text-center leading-relaxed">
+          <p className="md:text-xl sm:text-lg max-w-3xl text-center leading-relaxed">
             I'm a full-stack developer with a passion for design, coding, and everything in between. I enjoy building web applications and creating games—bringing ideas to life through code and design is what helps me strive.
           </p>
 
-          <div className="flex gap-6 mt-4">
+          <div className="flex md:gap-6 sm:gap-4 mt-4">
             <button
               onClick={() => navigate("/projects")}
-              className="bg-indigo-600 hover:bg-indigo-500 text-white text-xl font-semibold px-12 py-4 rounded-lg transition-transform transform hover:scale-105"
+              className="bg-indigo-600 hover:bg-indigo-500 text-white text-xl font-semibold md:px-12 md:py-4 sm:px-6 sm:py-2 rounded-lg transition-transform transform hover:scale-105"
             >
               Projects
             </button>
             <button
               onClick={() => navigate("/contact")}
-              className="bg-indigo-600 hover:bg-indigo-500 text-white text-xl font-semibold px-12 py-4 rounded-lg transition-transform transform hover:scale-105"
+              className="bg-indigo-600 hover:bg-indigo-500 text-white text-xl font-semibold md:px-12 md:py-4 sm:px-6 sm:py-2 rounded-lg transition-transform transform hover:scale-105"
             >
               Contact
             </button>
