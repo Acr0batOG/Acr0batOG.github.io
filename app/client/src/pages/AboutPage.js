@@ -26,7 +26,7 @@ const AboutPage = () => {
         <div className="w-0 h-full">
           <SideNavBar />
         </div>
-        <div className="flex-1 flex flex-col items-center text-black space-y-20 md:pb-36 sm:pb-24">
+        <div className="flex-1 flex flex-col items-center text-black space-y-20 md:pb-36 sm:pb-12">
         <h1 className="text-4xl font-bold text-indigo-600 mt-20 mb-6 text-center">
           About Me
         </h1>
@@ -45,7 +45,7 @@ const AboutPage = () => {
             />
           ))}
         </div>
-        <div className='md:pl-0 md:pr-0 sm:pr-20 sm:pl-20'>
+        <div className='md:pl-0 md:pr-0 sm:pr-[5.7rem] sm:pl-[5.7rem]'>
         {/* Bio Section */}
         <div className="bg-gray-100 p-8 rounded-2xl shadow-md w-full max-w-3xl text-gray-800 text-lg leading-relaxed">
           <p>
