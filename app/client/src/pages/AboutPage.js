@@ -17,7 +17,7 @@ const AboutPage = () => {
     <div className="h-screen flex flex-col overflow-hidden overflow-y-auto">
       <Header />
       
-      <div className="md:flex-auto sm:flex-grow bg-cover bg-top flex"
+      <div className="md:flex-auto sm:flex-grow flex-grow bg-cover bg-top flex"
         style={{
           backgroundImage: "url('/images/background.svg')",
         }}
@@ -26,26 +26,26 @@ const AboutPage = () => {
         <div className="w-0 h-full">
           <SideNavBar />
         </div>
-        <div className="flex-1 flex flex-col items-center text-black space-y-20 md:pb-36 sm:pb-12">
-        <h1 className="text-4xl font-bold text-indigo-600 mt-20 mb-6 text-center">
+        <div className="flex-1 flex flex-col items-center text-black space-y-20 md:pb-36 sm:pb-12 pb-12">
+        <h1 className="text-4xl font-bold text-indigo-600 mt-20 md:mb-6 sm:mb-6 mb-4 text-center">
           About Me
         </h1>
 
         {/* Filler Images */}
-        <div className="flex gap-8 sm:mb-6 md:mb-10 flex-wrap justify-center">
+        <div className="flex md:gap-8 sm:gap-8 gap-6 sm:mb-6 mb-6 md:mb-10 flex-wrap justify-center">
           {['skiing', 'golf', 'vr'].map((activity) => (
             <img
               key={activity}
               src={`/images/rhys${activity}small.jpg`}
               alt={activity}
               onClick={() => openImage(`/images/rhys${activity}small.jpg`)}
-              className="cursor-pointer rounded-2xl shadow-md md:w-72 sm:w-64 md:h-72 sm:h-64 object-cover hover:scale-[1.1] hover:shadow-xl border-[1px] border-indigo-600 transition-transform"
+              className="cursor-pointer rounded-2xl shadow-md md:w-72 sm:w-64 w-56 md:h-72 sm:h-64 h-56 object-cover hover:scale-[1.1] hover:shadow-xl border-[1px] border-indigo-600 transition-transform"
               style={{ imageRendering: 'optimize-contrast' }}
               title = {`${activity}`}
             />
           ))}
         </div>
-        <div className='md:pl-0 md:pr-0 sm:pr-[5.7rem] sm:pl-[5.7rem]'>
+        <div className='md:pl-0 md:pr-0 sm:pr-[5.7rem] sm:pl-[5.7rem] pr-[2.0rem] pl-[2.0rem]'>
         {/* Bio Section */}
         <div className="bg-gray-100 p-8 rounded-2xl shadow-md w-full max-w-3xl text-gray-800 text-lg leading-relaxed">
           <p>
@@ -88,7 +88,7 @@ const AboutPage = () => {
           <img
             src={fullscreenImg}
             alt="Fullscreen"
-            className="max-w-[42rem] max-h-[42rem] object-contain rounded-lg"
+            className="h-[22rem] w-[22rem] md:h-[42rem] md:w-[42rem] md:max-w-[42rem] md:max-h-[42rem] object-contain rounded-lg"
           />
         </div>
       )}

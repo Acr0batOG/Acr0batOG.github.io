@@ -61,9 +61,9 @@ const Header = () => {
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          <div className="w-6 h-[2.5px] rounded-md bg-gray-900"></div>
-          <div className="w-6 h-[2.5px] rounded-md bg-gray-900"></div>
-          <div className="w-6 h-[2.5px] rounded-md bg-gray-900"></div>
+          <div className="w-6 h-[3px] rounded-md bg-gray-900"></div>
+          <div className="w-6 h-[3px] rounded-md bg-gray-900"></div>
+          <div className="w-6 h-[3px] rounded-md bg-gray-900"></div>
         </button>
       </header>
 

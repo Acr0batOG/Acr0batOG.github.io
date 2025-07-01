@@ -40,7 +40,7 @@ const ContactPage = () => {
       <Header />
       
       <div
-        className="md:flex-auto sm:flex-grow bg-cover bg-top flex"
+        className="md:flex-auto sm:flex-grow flex-grow bg-cover bg-top flex"
         style={{
           backgroundImage: "url('/images/background.svg')",
         }}
@@ -50,13 +50,13 @@ const ContactPage = () => {
         <div className="w-0 h-full">
           <SideNavBar />
         </div>
-        <div className="flex-1 flex flex-col items-center text-black space-y-20 md:pb-36 sm:pb-12 md:pl-0 md:pr-0 sm:pr-24 sm:pl-24">
+        <div className="flex-1 flex flex-col items-center text-black space-y-20 md:pb-36 sm:pb-12 pb-12 md:pl-0 md:pr-0 sm:pr-24 sm:pl-24 pr-10 pl-10">
         
-            <h1 className="text-4xl font-bold text-indigo-600 sm:mt-16 sm:mb-0 md:mt-20 md:mb-6 text-center">
+            <h1 className="text-4xl font-bold text-indigo-600 sm:mt-16 sm:mb-0 mt-16 mb-0 md:mt-20 md:mb-6 text-center">
               Contact Me
             </h1>
             
-            <form ref = {form} onSubmit = {sendEmail} className="form-control bg-gray-100 p-8 rounded-2xl shadow-md w-full max-w-xl">
+            <form ref = {form} onSubmit = {sendEmail} className="form-control bg-gray-100 md:p-8 sm:p-8 p-6 rounded-2xl shadow-md w-full max-w-xl">
               <div className="mb-4">
                 <label className="block text-gray-700 font-medium mb-2">
                   Name
@@ -103,7 +103,7 @@ const ContactPage = () => {
               </div>
               <button
                 type="submit"
-                className="bg-indigo-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-indigo-500 transition hover:scale-105"
+                className="bg-indigo-600 text-white font-semibold sm:px-6 sm:py-3 px-4 py-2 rounded-lg hover:bg-indigo-500 transition hover:scale-105"
               >
                 Send Message
               </button>
